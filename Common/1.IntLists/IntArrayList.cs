@@ -52,12 +52,16 @@ namespace Common
         public void Remove(int index)
         {
             //TODO #5: remove the element on the index-th position. Do nothing if position is out of bounds
-            while (index < NumElements)
+            if (index < NumElements)
+            {
+                NumElements--;
+            }
+            while (index <= NumElements)
             {
                 Values[index] = Values[index + 1];
                 index++;
             }
-            NumElements--;
+            
         }
 
 
